@@ -20,7 +20,7 @@
   transition: fill 0.3s linear;
 }
 
-.like-icon .contour {
+.like-icon .countur {
   fill: var(--contour-color);
   transition: fill 0.1s linear;
 }
@@ -58,7 +58,7 @@
   fill: var(--sparks-color);
 }
 
-.like-icon.is-liked .contour {
+.like-icon.is-liked .countur {
   fill: var(--sparks-color);
 }
 

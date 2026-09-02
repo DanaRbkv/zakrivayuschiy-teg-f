@@ -21,6 +21,8 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin-bottom: 98px;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .header {
@@ -32,7 +34,7 @@
   background-color: #fff;
   border: 2px solid var(--main-color);
   gap: 20px;
-  padding: 130px 122.5px;
+  padding: 130px clamp(1rem, 10.21vw, 7.656rem);
   margin-top: 100px;
 }
 
@@ -53,6 +55,7 @@
 }
 
 .main {
+  justify-content: center;
   justify-self: center;
   display: flex;
   flex-direction: column;
@@ -62,7 +65,6 @@
 .card-list {
   justify-self: center;
   align-self: center;
-  background-color: #fff;
 }
 
 .card { 
@@ -85,6 +87,16 @@
 .card-image {
   border-top: 2px solid var(--main-color);
   border-bottom: 2px solid var(--main-color);
+  display: block;
+}
+
+.card-image img,
+.card-image .image { 
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  min-height: 100%;
 }
 
 .card-description {
@@ -150,6 +162,7 @@
 
 .button__save {
   display: flex;
+  position: relative;
   flex-direction: row;
   border: 2px solid var(--main-color);
   width: 335px;
@@ -270,18 +283,13 @@ button:hover:after {
 }
 
 .card__icon-button::after {
-  content: '';
-  position: absolute;
-  transform: none;
+  content: none;
 }
-
-
-
 
 @media (width <= 375px) {
 
   .header {
-    padding: 122px 16px;
+    padding: 122px 1rem;
   }
 
   .image {
